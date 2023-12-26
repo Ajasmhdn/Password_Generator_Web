@@ -160,6 +160,39 @@ button {
     margin-bottom: 8px;
 }
 
+/* Style the checkboxes */
+.setting input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff; /* Blue color */
+    border-radius: 4px;
+    border: 2px solid #007bff;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style the tick inside the custom checkbox */
+.setting input[type="checkbox"]:checked {
+    background-color: #007bff; /* Blue color */
+    color: white;
+}
+
+/* Hide the default checkbox tick */
+.setting input[type="checkbox"]:checked:after {
+    content: '';
+}
+
+/* Style the label */
+.setting label {
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
 .btn.generate {
     user-select: none;
     position: relative;
@@ -224,7 +257,7 @@ a:hover {
 .length__title::after {
     content: attr(data-length);
     position: absolute;
-    right: -19px;
+    right: -17px;
     font-variant-numeric: tabular-nums;
     color: #fff;
     font-weight: bold;
